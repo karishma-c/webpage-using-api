@@ -2,7 +2,8 @@
     --ff: 'Nunito', sans-serif;
     --fs: 16px;
     --fs-1: 1.3rem;
-    --fs-2: .9rem;
+    --fs-2: 1.1rem;
+    --fs-3: .9rem;
     --fw-1: 400;
     --fw-2: 600;
     --fw-3: 700;
@@ -71,7 +72,7 @@ body {
     color: var(--color-1);
 }
 input {
-    font-size: var(--fs-2);
+    font-size: var(--fs-3);
     padding: 15px;
     border: none;
     margin: 0 0 0 70px;
@@ -83,7 +84,7 @@ input {
 }
 .btn {
     position: relative;
-    font-size: var(--fs-2);
+    font-size: var(--fs-3);
     background-color: var(--bg-neutral);
     box-shadow: 2px 4px 10px rgba(0, 0, 0, .1);
     border: none;
@@ -134,4 +135,47 @@ input {
 .btn:focus + .filters {
     opacity: 1;
     pointer-events: all;
+}
+#card-container {
+    margin: 30px auto;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    width: 97%;
+}
+.card {
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin: 0 40px 70px auto;
+    width: 240px;
+    height: 340px;
+    background-color: var(--bg-neutral);
+    border-radius: var(--br);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, .1);
+}
+
+.flag-image {
+    width: auto;
+    height: 150px;
+}
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px 5px 0 0;
+}
+.country-name {
+    font-size: var(--fs-2);
+    font-weight: var(--fw-4);
+    margin: 30px 0 20px;
+    padding: 0 0 0 30px;
+}
+.popu, .country-region, .country-capital {
+    font-size: var(--fs-3);
+    font-weight: var(--fw-1);
+    padding: 0 0 5px 30px;
+    margin: 0;
 }

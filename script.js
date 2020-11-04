@@ -1,4 +1,4 @@
-const app = document.getElementById("root");
+const container = document.getElementById("card-container");
 
 
 var request = new XMLHttpRequest();
@@ -35,7 +35,7 @@ request.onload = function () {
             capital.textContent = country.capital;
       
             
-            app.appendChild(card);
+            container.appendChild(card);
             flagImage.appendChild(image);
             card.appendChild(flagImage);
             card.appendChild(countryName);
@@ -44,9 +44,9 @@ request.onload = function () {
             card.appendChild(capital);
         });
     } else {
-        const errorMessage = document.createElement('marquee');
-        errorMessage.textContent = `Gah, it's not working!`;
-        app.appendChild(errorMessage);
+        const errorMessage = document.createElement('h1');
+        errorMessage.textContent = `OOPS, it's not working!`;
+        container.appendChild(errorMessage);
     }
 }
 
