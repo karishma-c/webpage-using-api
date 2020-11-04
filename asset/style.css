@@ -1,0 +1,137 @@
+:root {
+    --ff: 'Nunito', sans-serif;
+    --fs: 16px;
+    --fs-1: 1.3rem;
+    --fs-2: .9rem;
+    --fw-1: 400;
+    --fw-2: 600;
+    --fw-3: 700;
+    --fw-4: 800;
+    --bg-neutral: hsl(0, 0%, 100%);
+    --bg-1: hsl(0, 0%, 98%);
+    --color-1:  hsl(0, 0%, 52%);
+    --color-2: hsl(200, 15%, 8%);
+    --color-3:  rgb(218, 216, 216);
+    --br: 5px;
+}
+body {
+    font-family: var(--ff);
+    background: var(--bg-1);
+    font-size: var(--fs);
+    margin: 0;
+}
+.container {
+    font-family: var(--ff);
+    margin: 0;
+    width: 100%;
+}
+.header-content {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0 auto;
+    background-color: var(--bg-neutral);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, .1);
+}
+.heading {
+    font-size: var(--fs-1);
+    font-weight: var(--fw-4);
+    margin: 15px  0 15px 60px;
+}
+.mode {
+    font-weight: var(--fw-4);
+    margin: 15px 60px 15px 0;
+}
+.mode i {
+    padding: 0 3px 0 0;
+}
+.form-elements {
+    
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: 30px auto;
+}
+.input-wrapper {
+    position: relative;
+    width: 30%;
+    margin: 15px  0 15px 60px;
+    background-color: var(--bg-neutral);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, .1);
+    border-radius: var(--br);
+}
+.input-icon {
+    position: absolute;
+    left: 30px;
+    top: 15px; 
+    color: var(--color-1);
+}
+input {
+    font-size: var(--fs-2);
+    padding: 15px;
+    border: none;
+    margin: 0 0 0 70px;
+    color:var(--color-1);
+}
+.drop-down {
+    margin: 15px 60px 15px 0;
+    font-family: var(--ff);
+}
+.btn {
+    position: relative;
+    font-size: var(--fs-2);
+    background-color: var(--bg-neutral);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, .1);
+    border: none;
+    padding: 15px 30px 15px 0;
+    color: var(--color-2);
+    margin: 0;
+    width: 180px;
+    border-radius: var(--br);
+    cursor: pointer;
+}
+.btn i {
+    position: absolute;
+    top: 17px;
+    right: -4px;
+    padding: 0 15px
+}
+.filters {
+    position: absolute;
+    background-color: var(--bg-neutral);
+    margin: 5px 0;
+    padding: 0;
+    width: 180px;
+    height: 160px;
+    border-radius: var(--br);
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, .1);
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .5s ease;
+    overflow: hidden;
+}
+.filters li {
+    width: 100%;
+    height: 100%;
+    padding: 5px 0 5px 20px;
+    overflow: hidden;
+}
+.filters li:hover {
+    background-color: var(--color-3);
+}
+.filters li a {
+    text-decoration: none;
+    color: var(--color-2);
+}
+.btn:focus + .filters {
+    opacity: 1;
+    pointer-events: all;
+}
