@@ -12,28 +12,42 @@
     <div class="container">
         <header class="header-content">
             <h1 class="heading">Where in the world?</h1>
-            <h4 class="mode">
+            <button class="mode">
                 <i class="far fa-moon"></i> 
                 Dark Mode
-            </h4>
+                
+            </button>
         </header>
         <main>
             <form class="form-elements">
                 <div class="input-wrapper">
                     <label for="text-field" class="fas fa-search input-icon"></label>
-                    <input type="text" id="text-field" placeholder= "Search for the country..." name="search">
+                    <input type="text" id="search" placeholder= "Search for the country..." name="search">
+                    
                 </div>
                 <div class="drop-down">
-                    <button class="btn">Filter by Region
+                    <!--
+                         <button class="btn">Filter by Region
                         <i class="fas fa-chevron-down"></i>
                     </button>
                     <ul class="filters">
-                        <li><a href="#">Africa</a></li>
-                        <li><a href="#">America</a></li>
-                        <li><a href="#">Asia</a></li>
-                        <li><a href="#">Europe</a></li>
-                        <li><a href="#">Oceania</a></li>
-                    </ul>
+                        <li class="filter-list"><a class="filter-content" href="#">Africa</a></li>
+                        <li class="filter-list"><a class="filter-content" href="#">America</a></li>
+                        <li class="filter-list"><a class="filter-content" href="#">Asia</a></li>
+                        <li class="filter-list"><a class="filter-content" href="#">Europe</a></li>
+                        <li class="filter-list"><a class="filter-content" href="#">Oceania</a></li>
+                    </ul> 
+                    -->
+                  
+                    <h4>Filter by Region</h4> 
+                    <select id="mySelect">
+                        <option value="">select</option>
+                      <option value="africa">Africa</option>
+                      <option value="america">America</option>
+                      <option value="asia">Asia</option>
+                      <option value="europe">Europe</option>
+                      <option value="oceania">Oceania</option>
+                    </select>
                 </div>
             </form>
         </main>
@@ -51,6 +65,36 @@
             -->
         </div>
     </div>
+    <div id="simpleModal" class="modal-overlay">
+        <div class="modal-content">
+            <span class="closeBtn"></span>
+        </div>
+    </div>        
     <script src="./script.js"></script>
 </body>
-</html><i class="fas fa-moon"></i>
+</html>
+
+
+<!--
+                <div class="card">
+                    <div class="flag-image">
+                       <img src="" alt="country">
+                    </div>
+                    <div class="info">
+                        <div class="info1">
+                           <h3 class="country-name"></h3>
+                           <h5 class="native">Native Name: </h5>
+                           <h5 class="popu">Population: </h5>
+                           <h5 class="country-region">Region: </h5>
+                           <h5 class="subRegion">Sub Region: </h5>
+                           <h5 class="country-capital">Capital: </h5>
+                           <h5 class="domain">Top Level Domain: </h5>
+                           <h5 class="currency">Currencies: </h5>
+                           <h5 class="language">Languages: </h5>
+                        </div>
+                        <ul class="border">Border Countries:  
+                           <li></li>
+                        </ul>   
+                    </div>
+                </div>
+            -->
