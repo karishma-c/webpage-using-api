@@ -31,7 +31,7 @@ body {
     --secondary-color: hsl(209, 23%, 22%);
     --input-color:  hsl(0, 0%, 90%);
     --header-color: white;
-    --hover-color:  rgb(163, 155, 155);     `
+    --hover-color:  rgb(163, 155, 155);     
 }
 
 .container {
@@ -55,7 +55,13 @@ body {
     margin: 15px  0 15px 60px;
     color: var(--header-color);
 }
-
+.gitLink {
+    text-decoration: none;
+    color: var(--header-color);
+}
+.gitLink:hover {
+    border-bottom: 2px solid var(--header-color);
+}
 .mode {
     font-family: var(--ff);
     font-size: var(--fs-2);
@@ -106,60 +112,26 @@ input {
     margin: 15px 60px 15px 0;
     font-family: var(--ff);
 }
-.btn {
-    position: relative;
-    font-size: var(--fs-3);
+.filter-heading {
+    font-size: var(--fs-2);
+    color: var(--header-color);
+}
+#mySelect {
+    font-family: var(--ff);
+    font-size: var(--fs-2);
+    width: 150px;
     background-color: var(--secondary-color);
     box-shadow: 2px 4px 10px rgba(0, 0, 0, .1);
     border: none;
-    padding: 15px 30px 15px 0;
-    color: var(--header-color);
-    margin: 0;
-    width: 180px;
     border-radius: var(--br);
-    cursor: pointer;
-}
-.btn i {
-    position: absolute;
-    top: 17px;
-    right: -4px;
-    padding: 0 15px
-}
-.filters {
-    position: absolute;
-    background-color: var(--secondary-color);
-    margin: 5px 0;
-    padding: 0;
-    width: 180px;
-    height: 160px;
-    border-radius: var(--br);
-    box-shadow: 2px 4px 10px rgba(0, 0, 0, .1);
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    opacity: 0;
-    pointer-events: none;
-    transition: all .5s ease;
-    overflow: hidden;
-}
-.filter-list {
-    width: 100%;
-    height: 100%;
-    padding: 5px 0 5px 20px;
-    overflow: hidden;
-}
-.filter-list:hover {
-    background-color: var(--hover-color);
-}
-.filter-content {
-    text-decoration: none;
+    padding: 12px 10px 12px;
     color: var(--header-color);
 }
-.btn:focus + .filters {
-    opacity: 1;
-    pointer-events: all;
+#mySelect option {
+    font-size: var(--fs-2);
+    padding: 5px;
 }
+
 #card-container {
     margin: 30px auto;
     display: flex;
